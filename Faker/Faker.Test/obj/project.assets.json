@@ -1788,6 +1788,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Faker/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Faker.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Faker.dll": {}
+        }
       }
     }
   },
@@ -6325,10 +6335,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Faker/1.0.0": {
+      "type": "project",
+      "path": "../Faker/Faker.csproj",
+      "msbuildProject": "../Faker/Faker.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Faker >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
@@ -6366,7 +6382,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\mywork\\SPPlabs\\SPP_2\\Faker\\Faker\\Faker.csproj": {
+              "projectPath": "C:\\mywork\\SPPlabs\\SPP_2\\Faker\\Faker\\Faker.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -11,6 +11,4 @@ namespace Faker
         bool CanGenerate(Type type);
         object Generate(Type typeToGenerate, GeneratorContext context);
     }
-
-   
 }

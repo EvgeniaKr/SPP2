@@ -16,5 +16,6 @@ namespace Faker
 
         public Random Random { get; }
         public IFaker Faker { get; }
+
     }
 }

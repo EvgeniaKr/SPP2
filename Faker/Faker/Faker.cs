@@ -5,6 +5,7 @@ namespace Faker
     public class Faker : IFaker
     {
         Generator generator;
+        IGenerator igenerator;
         public Faker()
         {
             Type generatorType = typeof(IGenerator);
@@ -17,10 +18,10 @@ namespace Faker
         }
         public object Create(Type t) // метод для внутреннего использования
         {
-            object Obj;
             GeneratorContext context = new GeneratorContext(this);
-            return Obj;
+            return igenerator.Generate(t, context);
 
         }
+
     }
 }

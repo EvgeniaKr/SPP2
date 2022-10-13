@@ -1,0 +1,12 @@
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\bin\Debug\net6.0\Faker.deps.json
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\bin\Debug\net6.0\Faker.dll
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\bin\Debug\net6.0\Faker.pdb
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.csproj.AssemblyReference.cache
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.GeneratedMSBuildEditorConfig.editorconfig
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.AssemblyInfoInputs.cache
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.AssemblyInfo.cs
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.csproj.CoreCompileInputs.cache
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.dll
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\refint\Faker.dll
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\Faker.pdb
+C:\mywork\SPPlabs\SPP_2\Faker\Faker\obj\Debug\net6.0\ref\Faker.dll

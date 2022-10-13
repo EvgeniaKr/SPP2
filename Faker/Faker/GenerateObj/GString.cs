@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Faker.GenerateObj
 {
-    internal class GString
+    public class GString : IGenerator
     {
         public bool CanGenerate(Type type)
         {
