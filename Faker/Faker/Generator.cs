@@ -8,5 +8,6 @@ namespace Faker
 {
     internal class Generator
     {
+
     }
 }

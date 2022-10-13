@@ -12,7 +12,5 @@ namespace Faker
         object Generate(Type typeToGenerate, GeneratorContext context);
     }
 
-    public class GeneratorContext
-    {
-    }
+   
 }

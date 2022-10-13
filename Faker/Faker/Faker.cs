@@ -17,8 +17,9 @@ namespace Faker
         }
         public object Create(Type t) // метод для внутреннего использования
         {
-
-            return null;
+            object Obj;
+            GeneratorContext context = new GeneratorContext(this);
+            return Obj;
 
         }
     }
