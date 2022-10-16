@@ -13,8 +13,8 @@ namespace Faker.Test
     [TestClass]
     public class Generatemet
     {
-        IGenerator generator;
-        private void SetUp(IGenerator _generator)
+        IValueGenerator generator;
+        private void SetUp(IValueGenerator _generator)
         {
             generator = _generator;
         }
