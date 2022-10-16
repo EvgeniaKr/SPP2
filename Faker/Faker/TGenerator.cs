@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Faker.GenerateObj;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -27,7 +28,7 @@ namespace Faker
                     return igenerator.Generate(type, generatorContext);
                 }
             }
-            return null;
+            return Default.GetDefaultValue(type);
         }
     }
 }
