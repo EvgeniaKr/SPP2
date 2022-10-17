@@ -18,8 +18,7 @@ namespace Faker
         {
             igenerator = null;
             Type lookupType = typeof(IValueGenerator);
-            IEnumerable<Type> generatorTypes = GetType().Assembly.GetTypes().Where(
-                    t => lookupType.IsAssignableFrom(t) && !t.IsInterface);
+            IEnumerable<Type> generatorTypes = GetType().Assembly.GetTypes().Where(t => lookupType.IsAssignableFrom(t) && !t.IsInterface);
             foreach (Type gen in generatorTypes)
             {
                 igenerator = (IValueGenerator)Activator.CreateInstance(gen);
