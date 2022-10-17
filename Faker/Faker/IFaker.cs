@@ -9,5 +9,6 @@ namespace Faker
     public interface IFaker
     {
         public T Create<T>();
+        object? Create(Type genericType);
     }
 }

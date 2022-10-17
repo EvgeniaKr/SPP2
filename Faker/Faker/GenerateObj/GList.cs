@@ -17,19 +17,14 @@ namespace Faker.GenerateObj
 
         public object Generate(Type typeToGenerate, GeneratorContext context)
         {
-
-            Type listContentType = context.GetType();
-            Type genericListType = typeof(List<>).MakeGenericType(listContentType);
-            IList list = (IList)Activator.CreateInstance(genericListType)!;
-            MethodInfo fakerCreateMethod = typeof(Faker).GetMethod(nameof(Faker.Create))!;
-            MethodBase fakerCreateGenericMethod = fakerCreateMethod.MakeGenericMethod(listContentType);
-            int listLength = context.Random.Next(0, 10);
-            for (var i = 0; i < listLength; i++)
+            int size = context.Random.Next(Byte.MaxValue / 2);
+            Type genericType = typeToGenerate.GetGenericArguments()[0];
+            object list = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(genericType));
+            for (int i = 0; i < size; i++)
             {
-                object newObject = fakerCreateGenericMethod.Invoke(context.Faker, Array.Empty<object>())!;
-                list.Add(newObject);
+                // generator.createRandomValue(genericType);
+                ((IList)list).Add(context.Faker.Create(genericType));
             }
-
             return list;
         }
     }

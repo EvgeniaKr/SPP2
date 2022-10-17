@@ -1,5 +1,8 @@
 ﻿using Faker.GenerateObj;
+using Faker.Scenarios;
 using System.Reflection.Emit;
+using System.Linq.Expressions;
+using System.Reflection;
 
 namespace Faker
 {

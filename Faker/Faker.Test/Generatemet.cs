@@ -14,6 +14,7 @@ namespace Faker.Test
     public class Generatemet
     {
         IValueGenerator generator;
+        IFaker faker;
         private void SetUp(IValueGenerator _generator)
         {
             generator = _generator;
@@ -27,12 +28,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
         }
         [TestMethod]
+        public void CheckTStrings()
+        {
+            faker = new Faker();
+            var instance = faker.Create<string>();
+            Assert.IsInstanceOfType(instance, typeof(string));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckBoolean()
         {
             SetUp(new GBoolean());
             Assert.IsTrue(generator.CanGenerate(typeof(bool)));
             Assert.IsFalse(generator.CanGenerate(typeof(int)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
+        }
+        [TestMethod]
+        public void CheckTBoolean()
+        {
+            faker = new Faker();
+            var instance = faker.Create<bool>();
+            Assert.IsInstanceOfType(instance, typeof(bool));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckByte()
@@ -43,12 +60,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
         }
         [TestMethod]
+        public void CheckTByte()
+        {
+            faker = new Faker();
+            var instance = faker.Create<byte>();
+            Assert.IsInstanceOfType(instance, typeof(byte));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckSByte()
         {
             SetUp(new GSByte());
             Assert.IsTrue(generator.CanGenerate(typeof(sbyte)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<int>)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
+        }
+        [TestMethod]
+        public void CheckTSByte()
+        {
+            faker = new Faker();
+            var instance = faker.Create<sbyte>();
+            Assert.IsInstanceOfType(instance, typeof(sbyte));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckInt16()
@@ -59,12 +92,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
         }
         [TestMethod]
+        public void CheckTInt16()
+        {
+            faker = new Faker();
+            var instance = faker.Create<short>();
+            Assert.IsInstanceOfType(instance, typeof(short));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckUInt16()
         {
             SetUp(new GUInt16());
             Assert.IsTrue(generator.CanGenerate(typeof(ushort)));
             Assert.IsFalse(generator.CanGenerate(typeof(int)));
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
+        }
+        [TestMethod]
+        public void CheckTUInt16()
+        {
+            faker = new Faker();
+            var instance = faker.Create<ushort>();
+            Assert.IsInstanceOfType(instance, typeof(ushort));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckInt32()
@@ -75,12 +124,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
         }
         [TestMethod]
+        public void CheckTInt32()
+        {
+            faker = new Faker();
+            var instance = faker.Create<int>();
+            Assert.IsInstanceOfType(instance, typeof(int));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckUInt32()
         {
             SetUp(new GUInt32());
             Assert.IsTrue(generator.CanGenerate(typeof(uint)));
             Assert.IsFalse(generator.CanGenerate(typeof(char)));
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
+        }
+        [TestMethod]
+        public void CheckTUInt32()
+        {
+            faker = new Faker();
+            var instance = faker.Create<uint>();
+            Assert.IsInstanceOfType(instance, typeof(uint));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckInt64()
@@ -91,12 +156,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
         }
         [TestMethod]
+        public void CheckTInt64()
+        {
+            faker = new Faker();
+            var instance = faker.Create<long>();
+            Assert.IsInstanceOfType(instance, typeof(long));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckUInt64()
         {
             SetUp(new GUInt64());
             Assert.IsTrue(generator.CanGenerate(typeof(ulong)));
             Assert.IsFalse(generator.CanGenerate(typeof(char)));
             Assert.IsFalse(generator.CanGenerate(typeof(double)));
+        }
+        [TestMethod]
+        public void CheckTUInt64()
+        {
+            faker = new Faker();
+            var instance = faker.Create<ulong>();
+            Assert.IsInstanceOfType(instance, typeof(ulong));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckSingle()
@@ -107,12 +188,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(List<int>)));
         }
         [TestMethod]
+        public void CheckTSingle()
+        {
+            faker = new Faker();
+            var instance = faker.Create<float>();
+            Assert.IsInstanceOfType(instance, typeof(float));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckDouble()
         {
             SetUp(new GDouble());
             Assert.IsTrue(generator.CanGenerate(typeof(double)));
             Assert.IsFalse(generator.CanGenerate(typeof(char)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<int>)));
+        }
+        [TestMethod]
+        public void CheckTDouble()
+        {
+            faker = new Faker();
+            var instance = faker.Create<double>();
+            Assert.IsInstanceOfType(instance, typeof(double));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckDecimal()
@@ -123,12 +220,28 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(List<int>)));
         }
         [TestMethod]
+        public void CheckTDecimal()
+        {
+            faker = new Faker();
+            var instance = faker.Create<decimal>();
+            Assert.IsInstanceOfType(instance, typeof(decimal));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckChar()
         {
             SetUp(new GChar());
             Assert.IsTrue(generator.CanGenerate(typeof(char)));
             Assert.IsFalse(generator.CanGenerate(typeof(string)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
+        }
+        [TestMethod]
+        public void CheckTChar()
+        {
+            faker = new Faker();
+            var instance = faker.Create<char>();
+            Assert.IsInstanceOfType(instance, typeof(char));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void CheckDateTime()
@@ -139,6 +252,14 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
         }
         [TestMethod]
+        public void CheckTDateTime()
+        {
+            faker = new Faker();
+            var instance = faker.Create<DateTime>();
+            Assert.IsInstanceOfType(instance, typeof(DateTime));
+            Assert.IsNotNull(instance);
+        }
+        [TestMethod]
         public void CheckList()
         {
             SetUp(new GList());
@@ -147,6 +268,13 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(int[])));
             Assert.IsTrue(generator.CanGenerate(typeof(List<int>)));
         }
-
+        [TestMethod]
+        public void CheckTList()
+        {
+            faker = new Faker();
+            var instance = faker.Create<List<int>>();
+            Assert.IsInstanceOfType(instance, typeof(List<int>));
+            Assert.AreNotEqual(0, instance.Count);
+        }
     }
 }

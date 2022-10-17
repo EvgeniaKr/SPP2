@@ -29,16 +29,40 @@ namespace Faker.Test
         {
             SetUp();
             SPrivate instance = faker.Create<SPrivate>();
-            Assert.IsInstanceOfType(instance, typeof(SPrivate));
-            Assert.IsNotNull(instance);
+            Assert.IsNotInstanceOfType(instance, typeof(SPrivate));
+            Assert.IsNull(instance);
         }
         [TestMethod]
         public void ClassMany()
         {
             SetUp();
             var instance = faker.Create<SMany>();
+            Assert.IsNotInstanceOfType(instance, typeof(SMany));
+            Assert.IsNull(instance);
+        }
+        [TestMethod]
+        public void ClassStruct()
+        {
+            SetUp();
+            var instance = faker.Create<SStruct.STStruct>();
+            Assert.IsInstanceOfType(instance, typeof(SStruct.STStruct));
             Assert.IsNotNull(instance);
-            Assert.AreNotEqual(instance.j, instance.i);
+        }
+        [TestMethod]
+        public void ClassException()
+        {
+            SetUp();
+            var instance = faker.Create<SException>();
+            Assert.IsNotInstanceOfType(instance, typeof(SException));
+            Assert.IsNull(instance);
+        }
+        [TestMethod]
+        public void ClassFaker()
+        {
+            SetUp();
+            var instance = faker.Create<Faker>();
+            Assert.IsNotInstanceOfType(instance, typeof(Faker));
+            Assert.IsNull(instance);
         }
     }
 }

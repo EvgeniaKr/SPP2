@@ -15,8 +15,7 @@ namespace Faker.GenerateObj
 
         public object Generate(Type typeToGenerate, GeneratorContext context)
         {
-            byte[] b = new byte[10];
-            context.Random.NextBytes(b);
+            byte b = (byte)context.Random.Next();
             return b;
         }
     }
