@@ -6,19 +6,17 @@ using System.Threading.Tasks;
 
 namespace Faker.GenerateObj
 {
-    public class GString : IValueGenerator
+    public class GInt32 : IValueGenerator
     {
         public bool CanGenerate(Type type)
         {
-            return type == typeof(string);
+            return type == typeof(int);
         }
 
         public object Generate(Type typeToGenerate, GeneratorContext context)
-        {           
-            var b = new byte[10];
-            context.Random.NextBytes(b);
-            string str = BitConverter.ToString(b);
-            return str;
+        {
+            int i = context.Random.Next();
+            return i;
         }
     }
 }
