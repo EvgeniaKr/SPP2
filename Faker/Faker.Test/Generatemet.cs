@@ -130,5 +130,23 @@ namespace Faker.Test
             Assert.IsFalse(generator.CanGenerate(typeof(string)));
             Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
         }
+        [TestMethod]
+        public void CheckDateTime()
+        {
+            SetUp(new GDateTime());
+            Assert.IsTrue(generator.CanGenerate(typeof(DateTime)));
+            Assert.IsFalse(generator.CanGenerate(typeof(string)));
+            Assert.IsFalse(generator.CanGenerate(typeof(List<double>)));
+        }
+        [TestMethod]
+        public void CheckList()
+        {
+            SetUp(new GList());
+            Assert.IsFalse(generator.CanGenerate(typeof(int)));
+            Assert.IsFalse(generator.CanGenerate(typeof(string)));
+            Assert.IsFalse(generator.CanGenerate(typeof(int[])));
+            Assert.IsTrue(generator.CanGenerate(typeof(List<int>)));
+        }
+
     }
 }
