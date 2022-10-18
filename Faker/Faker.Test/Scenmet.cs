@@ -29,8 +29,8 @@ namespace Faker.Test
         {
             SetUp();
             SPrivate instance = faker.Create<SPrivate>();
-            Assert.IsNotInstanceOfType(instance, typeof(SPrivate));
-            Assert.IsNull(instance);
+            Assert.IsInstanceOfType(instance, typeof(SPrivate));
+            Assert.IsNotNull(instance);
         }
         [TestMethod]
         public void ClassMany()
@@ -61,8 +61,9 @@ namespace Faker.Test
         {
             SetUp();
             var instance = faker.Create<Faker>();
-            Assert.IsNotInstanceOfType(instance, typeof(Faker));
-            Assert.IsNull(instance);
+            Assert.IsInstanceOfType(instance, typeof(Faker));
+            Assert.IsNotNull(instance);
         }
+
     }
 }
